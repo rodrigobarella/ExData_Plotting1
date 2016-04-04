@@ -30,13 +30,11 @@ data$Formdate <- strptime(data$Date,format = "%d/%m/%Y" )
 ##extracting weekdays from formated data column
 data$weekday <- weekdays(data$Formdate)
 
+#opening png device
+png("plot4.png",width = 480,height = 480)
 
 ##create plot 4 - combined plots
 #2 rows x 2 columns
-
-
-#opening png device
-png("plot4.png",width = 480,height = 480)
 par(mfrow=c(2,2))
 #--------------------------------------------plot panel 1-------------------------------------------------------------
 plot(data$Global_active_power,ylab="Global Active Power(kilowatts)",type="l",xaxt="n",xlab="")
